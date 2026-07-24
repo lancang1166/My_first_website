@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My First Webpage</title>
+    </head>
+    
+<!--- I am a comment  -->
+<!-- comment(ctrl + /) -->
+
+    <body>
+        <h1>Hello,World!</h1>
+        <strong>just a test</strong>
+        <p>another <strong>test</strong></p>
+        <p>more <em>test</em> <strong><em>test</em></strong></p>
+        <br>
+
+        <h2>关于列表</h2>
+            <h3>无序列表</h3>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+            <br>
+            <h3>有序列表</h3>
+            <ol>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ol>
+        <br>
+
+        <h2>关于链接</h2>
+            <h3>链接<strong>覆盖</strong>本标签页</h3>
+            <p>Odin项目链接</p>
+            <a href="https://www.theodinproject.com/about">About The odin Project</a>
+            <p>bilibili:<a href="https://www.bilibili.com">Bilibili</a></p>
+            
+            <h3>链接在<strong>新标签页打开</strong></h3>
+            <p>Odin项目链接</p>
+            <a href="https://www.theodinproject.com/about" target="_blank" rel="noreferrer noopener">About The odin Project</a>
+            <p>bilibili:<a href="https://www.bilibili.com" target="_blank" rel="noreferrer noopener">Bilibili</a></p>
+            
+        <h2>绝对链接与相对链接</h2>
+            <h3>绝对链接</h3>
+            <p>绝对链接是指从根目录开始的完整路径链接</p>
+            <p>例子如上</p>
+
+            <h3>相对链接</h3>
+            <p>相对链接是指相对于当前页面的路径链接</p>
+            <p>例如这个关联页面<a href="./pages/about.html" target="_blank"> 关于</a></p>
+        <br>
+
+        <h3>图片</h3>
+            <p>这是一张就jpg图片</p>
+            <p>绝对路径</p>
+            <img src="https://gamingbolt.com/wp-content/uploads/2022/10/Genshin-Impact-Nahida.jpg" alt="一只纳西妲" height="360" width="640">
+            <p>相对路径</p>
+            <img src="./src/picture/Genshin-Impact-Nahida.jpg" alt="一只纳西妲" height="360" width="640"> 
+            <br>
+            <p>这是一张gif图片(what can i say)</p>
+            <img src="./src/picture/noita-20250831-152251-497601187-00014072.gif" alt="noita,what can i say" height="360" width="640">
+            <br>
+
+        <h2>保留字符</h2>
+            <p>< 和 > 和 & 这些字符被称为“保留字符”。因为如果不进行编码的话，就不允许将这些字符插入到 HTML 文档中</p>
+            <p>保留字符是指在HTML中具有特殊意义的字符,需要使用实体引用来表示</p>
+            <!-- <p>例如：&lt; &gt; &amp; &quot; &apos;</p> -->
+            <p>例如:&amp;lt; &amp;gt; &amp;amp; &amp;quot; &amp;apos;</p>
+            <p>分别显示为:<  >  &  "  '</p>
+            <p>嗯,还有中文的引号,左右版本</p>
+            <p>&amp;ldquo; &amp;rdquo;</p>
+            <p>分别显示为: “  ”</p>
+
+        </body>
+</html>
