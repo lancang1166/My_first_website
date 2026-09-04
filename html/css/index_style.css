@@ -1,0 +1,66 @@
+.test26 {
+    color: red;
+}
+
+.test26 {
+    color: blue;
+}
+/* 说明css顺序执行并会进行覆盖，后面的样式会覆盖前面的样式。 */
+.emphasis{
+    color: red;
+}
+/* 如果类名以数字开头，那么类选择器将无法起作用。例如，如果你给某个元素指定类名为 4lert-text ，那么使用 .4lert-text 作为选择器是无法匹配该元素的。 */
+
+.div_test345 {
+    color: red;
+    font-size: 15px;
+    background-color: yellow;
+    border: 5px solid black;
+    /* Border（边框） 是围绕在 CSS 
+     语法：border: 宽度 样式 颜色;
+
+     宽度 (border-width)：常用单位为像素，如 1px、3px。
+     样式 (border-style)：常见有实线 solid、虚点线 dotted、虚线 dashed、双线 double。
+     颜色 (border-color)：支持颜色关键词、HEX（如 #ffffff）或 RGB 值。*/
+    
+     padding: 10px;
+    /* Padding（内边距） 是指 CSS 中元素内容（Content）与边框（Border）之间的空白区域。
+    四个值：padding: 10px 20px 30px 40px;（顺时针：上 右 下 左）
+    三个值：padding: 10px 20px 30px;（上 | 左右 | 下）
+    两个值：padding: 10px 20px;（上下 | 左右）
+    一个值：padding: 10px;（四边相同）
+    也可以单独设置某一个方向：
+    csspadding-top: 10px;  上内边距 
+    padding-right: 20px;   右内边距 
+    padding-bottom: 30px;  下内边距 
+    padding-left: 40px;    左内边距 */ 
+
+    margin: 20px;
+    /* 外边距 (Margin)：控制网页元素外部四周的空白间距，用来隔开不同的排版区块。
+    四边属性：包含上（top）、右（right）、下（bottom）、左（left）四个方向。 */
+    
+    width: 50px;
+    height: 120px;}
+
+    #test7 {
+        color:blueviolet;
+    }
+    /* id属性前面用#号 */
+
+    .test8,.test9{
+        color:aqua;
+    }/* 逗号分隔的选择器，表示同时选择多个元素。 */
+
+    .test10.class_test10{
+        color: green;
+    }/* 没有空格与逗号，链式选择器，表示同时满足两个条件的元素。 */
+
+    .test11#id_test11{
+        color: yellow;
+    }/* 也是链式选择器,但是id对应是#号 */
+
+    .ancestor .content{
+        color: red;
+    }/* 空格分隔的选择器，表示后代选择器，选择所有祖先元素下的后代元素。 
+    就是只有当 content 元素嵌套在 ancestor 元素内部时， content 才会被选中，而与嵌套的深度无关。
+    对应的html里是那两个嵌套的content元素都被选中*/

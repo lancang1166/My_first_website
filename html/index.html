@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="./css/index_style.css"
         <meta charset="utf-8">
         <title>My First Webpage</title>
     </head>
@@ -9,6 +10,8 @@
 <!-- comment(ctrl + /) -->
 
     <body>
+        <p><em>基于Odin项目文档做的笔记</em></p>
+        
         <h1>Hello,World!</h1>
         <strong>just a test</strong>
         <p>another <strong>test</strong></p>
@@ -57,10 +60,10 @@
             <p>绝对路径</p>
             <img src="https://gamingbolt.com/wp-content/uploads/2022/10/Genshin-Impact-Nahida.jpg" alt="一只纳西妲" height="360" width="640">
             <p>相对路径</p>
-            <img src="./src/picture/Genshin-Impact-Nahida.jpg" alt="一只纳西妲" height="360" width="640"> 
+            <img src="./src/image/Genshin-Impact-Nahida.jpg" alt="一只纳西妲" height="360" width="640"> 
             <br>
             <p>这是一张gif图片(what can i say)</p>
-            <img src="./src/picture/noita-20250831-152251-497601187-00014072.gif" alt="noita,what can i say" height="360" width="640">
+            <img src="./src/image/noita-20250831-152251-497601187-00014072.gif" alt="noita,what can i say" height="360" width="640">
             <br>
 
         <h2>保留字符</h2>
@@ -72,6 +75,52 @@
             <p>嗯,还有中文的引号,左右版本</p>
             <p>&amp;ldquo; &amp;rdquo;</p>
             <p>分别显示为: “  ”</p>
+
+        <h2>css学习笔记</h2>
+            <p>基本语法:</p>   
+            <img src="./src/image/QQ20260731-002029.png" alt="odin那偷来的截图">
+            <p class="emphasis"><strong>如果类名以数字开头，那么类选择器将无法起作用。例如，如果你给某个元素指定类名为 4lert-text ，那么使用 .4lert-text 作为选择器是无法匹配该元素的。</strong></p>
+            <p>关于`class`属性，另一项用法是：可以将多个类名以空格分隔的方式添加到同一个元素上，例如` class="alert-text severe-alert" `。由于类名之间是用空格来分隔的，因此对于由多个单词组成的类名，不应使用空格，而应使用连字符来分隔。</p>
+            <br>
+            <p>ID 选择器与类选择器类似。它们都是用来选中具有特定 ID 的元素。ID 是另一种可以添加到 HTML 元素上的属性。类和 ID 的主要区别在于：<strong class="emphasis">ID 是唯一的</strong>,一个元素只能有一个 ID。同一个页面上不能重复使用同一个 ID，而且 ID 中不能包含任何空格。</p>
+            <strong>不过，除非确实有必要，否则应尽量少使用 ID,另外ID 选择器也不能以数字开头</strong>
+
+        <h2>下面是关于css的学习实验区域</h2>
+
+            <p>1.test</p>
+            <p class="test26">2.test</p>
+            <div class="div_test345">
+                <p>3.test</p>
+                <p>4.test</p>
+                <p>5.test</p>
+            </div>
+            <p class="test26">6.test</p>
+            <p id="test7">7.test</p>
+            <p class="test8">8.test</p>
+            <p class="test9">9.test</p>
+            <p class="test10 class_test10">10.test</p>
+            <p class="test11" id="id_test11">11.test</p>
+            <div class="ancestor">
+                <div class="content">
+                    <div class="content">12.test</div>
+                </div>
+            </div>
+        <br>
+        <h2>常遇到的css属性</h2>
+            <ol>
+                <li>颜色:color 属性用于设置元素的文字颜色</li>
+                <li>背景色:background-color 属性用于设置元素的背景颜色</li>
+                <li>字体font-family:用于设置元素的字体类型,接受列表，列表里是字体名称，若第一个字体不支持，就下一个，以此类推</li>
+                <li>字体大小font-size:用于设置元素的字体大小</li>
+                <li>字体粗细font-weight:用于设置元素的字体粗细,接受关键字(如bold)或者数字(1到1000)</li>
+                <li>字体样式font-style:用于设置元素的字体样式</li>
+                <li>文本对齐text-align:用于设置元素的文本对齐方式,你可以使用在文字处理软件中常见的关键字作为该属性的值，例如 text-align: center</li>
+                <li>img里面的height和width属性:用于设置图片的高度和宽度,有auto选项,比如 height: auto; width: 500px;就是宽度为500像素，高度自适应，保持比例关系</li>
+            </ol>
+        <br>
+
+        <p>内部 CSS（或嵌入式 CSS）指的是在 HTML 文件内部添加 CSS 代码，而不是创建一个完全独立的文件。采用这种方式时，将所有 CSS 规则放在一对 &lt;style&gt; 标签内，然后将这些标签放在 HTML 文件的 &lt;head&gt; 标签内。由于样式直接位于 &lt;head&gt; 标签内，因此不再需要外部方法中所使用的 &lt;link&gt; 元素。</p>
+            
 
         </body>
 </html>
