@@ -121,6 +121,50 @@
 
         <p>内部 CSS（或嵌入式 CSS）指的是在 HTML 文件内部添加 CSS 代码，而不是创建一个完全独立的文件。采用这种方式时，将所有 CSS 规则放在一对 &lt;style&gt; 标签内，然后将这些标签放在 HTML 文件的 &lt;head&gt; 标签内。由于样式直接位于 &lt;head&gt; 标签内，因此不再需要外部方法中所使用的 &lt;link&gt; 元素。</p>
             
+        <h1>css的优先级</h1>
+        <ol>
+            <h2><li>Specificity 特异性</li></h2>
+            <p>ID选择器 &gt; 类选择器 &gt;类型选择器</p>
+            <p>另外值得说明的一点是，只有当某个元素存在多个相互冲突的声明时才会考虑特异性要素，且如果比较特异性后仍然无法确定胜者，那么就会比较同一类别中选择器的数量。拥有更多选择器的选择器将具有优先权。</p>
+            <br>
+            <p>下面是odin里面的例子</p>
+            <img src="./src/image/QQ20260906-023037.png" alt="odin的例子图" width="640" height="480">
+            <div class="main">
+                <div class="list subsection">Red text</div>
+            </div>
+            <p>两条规则都只使用了类选择器。不过，第二条规则更为具体，因为它使用了更多的类选择器，因此` color: red `的声明会具有优先权(目前详情对应css文件里的第68行)</p>
+            <p>需要着重说明的一点是，特异性只针对冲突规则，举个例子</p>
+            <img src="./src/image/QQ20260906-023100.png" alt="odin的另一张例子图" width="640" height="480">
+            <p>这里虽然 color: red 的声明具有优先级，但由于没有其他冲突的声明，因此 background-color: yellow 的声明仍然会被应用。</p>
+        
+        <br>
+            <h2><li>Inheritance  继承权</li></h2>
+            <p>简单来说就是一些类似字体的属性(如 color 、 font-size等)会被使用该属性元素的子元素继承(如果你不指定子元素样式时)</p>
+        
+        <br>
+            <h2><li>Rule order  规则秩序</li></h2>
+            <p>简单概括就是如果冲突规则在上面两个判断下依旧上打平了，就用后面一个规则</p>
 
+        </ol>
+        <br>
+
+        <h3>一些额外的css规则级别</h3>
+        <img src="./src/image/QQ20260906-024638.png" alt="一张图片" width="640" >
+
+        <br>
+        <h1>盒式模型</h1>
+        <ul>
+            <li>margin: 外边距 用来隔开盒子与盒子的 会增加盒子边界与内部内容之间的间距。</li>
+            <li>border: 边框 盒子的边缘 会在边距和内边距之间添加空格（即使只有一两像素）。</li>
+            <li>padding: 内边距 内容的延伸区域 会增加盒子边界与相邻盒子边界之间的间距。</li>
+            <li>content: 内容区域</li>
+        </ul>
+        <img src="./src/image/QQ20260906-041423.png" alt="盒式模型图" width="640" height="480">
+        <p>需要注意的一点是，margin其实并不是元素的一部分，只是元素间的空间，两个元素间的空间取两个元素中margin值大的那个</p>
+        <p>上面那句话一般是对的，因为一般是两个正值，但是完善的说看下面的图</p>
+        <img src="./src/image/QQ20260906-053037.png" alt="margin collapsing规则" width="640" height="480">
+        <br>
+        <p><strong>关于box-sizing: border-box</strong>简单来说width和height属性默认是content的，而不是element的，element整体的高度宽度是在content基础上加上padding和border的。</p>
+        <p>而box-sizing: content-box则使width和height属性对应element整个元素区域的大小。</p>
         </body>
 </html>
