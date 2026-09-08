@@ -166,5 +166,30 @@
         <br>
         <p><strong>关于box-sizing: border-box</strong>简单来说width和height属性默认是content的，而不是element的，element整体的高度宽度是在content基础上加上padding和border的。</p>
         <p>而box-sizing: content-box则使width和height属性对应element整个元素区域的大小。</p>
+
+        <br>
+        <h1>block和inline元素</h1>
+        <h2>1.block</h2>
+        <p>block即是display:block默认情况下，块级元素会在一个接一个地堆叠在页面上，每个新元素都会开始在新行上显示。 </p>
+        <p>常见的默认为block的元素有：h1-h6, p, div, ul, ol, li等。</p>
+        <h2>2.inline</h2>
+        <p>inline即是display:inline默认情况下，内联元素不会开始在新行上显示，而是会与其他内联元素在同一行上显示。 </p>
+        <p>常见的默认为inline的元素有：a, span, strong, em等。</p>
+        <h2>3.inline-block</h2>
+        <p>inline-block即是display:inline-block默认情况下，内联块级元素会与其他内联元素在同一行上显示，但可以设置宽度和高度。</p>
+        <p>简单来说，就是中间方案，介于block和inline之间。</p>
+        <br>
+        <h1>一些别的可以修改默认流程的属性</h1>
+        <p>1. float 对应的值有left、right和none,会导致块级元素只显示在一侧</p>
+        <p>2. position(精确控制元素在其他容器内的位置) 对应的值有static(默认布局方式)、fixed(固定元素位置)和relative(相对位置)，会导致元素脱离文档流</p>
+        <p>3. display(控制元素的显示方式) 对应的值有block、inline、inline-block等</p>
+        <p>4. Responsive design  响应式设计 指的是创建能够适应不同设备渲染网页的布局（例如桌面和手机）。响应式设计本身不提供任何特定的布局工具;它最重要的组件是 @media AT-rule，允许你根据设备属性（如屏幕宽度或分辨率）应用不同的布局。</p>
+        <p>不常用的其他布局:Table layout表格布局，Multi-column layout多列布局</p>
+
+        <br>
+        <h1>div和span</h1>
+        <p>div是默认为block的空容器</p>
+        <p>span是默认为inline的空容器</p>
+        <p>就是如此而已</p>
         </body>
 </html>
